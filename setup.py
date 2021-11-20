@@ -4,6 +4,13 @@ from os import path
 
 from setuptools import setup
 
+try:
+    from featureselectors import __about__ as about
+except ImportError:
+    
+    sys.path.append("featureselectors")
+    import __about__ as about
+
 PATH_HERE = path.abspath(path.dirname(__file__))
 
 with open(path.join(PATH_HERE, 'requirements.txt'), encoding='utf-8') as fp:
