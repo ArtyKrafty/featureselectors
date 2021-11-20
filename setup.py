@@ -5,10 +5,10 @@ from os import path
 from setuptools import setup, find_packages
 
 try:
-    from mytools import __about__ as about
+    from SHFS import __about__ as about
 except ImportError:
     
-    sys.path.append("mytools")
+    sys.path.append("SHFS")
     import __about__ as about
 
 PATH_HERE = path.abspath(path.dirname(__file__))
@@ -18,7 +18,7 @@ with open(path.join(PATH_HERE, 'requirements.txt'), encoding='utf-8') as fp:
 
 
 setup(
-    name='mytools',
+    name='SHFS',
     version=about.__version__,
     url=about.__homepage__,
     author=about.__author__,
