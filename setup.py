@@ -2,7 +2,7 @@
 import sys
 from os import path
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 try:
     from mytools import __about__ as about
@@ -24,7 +24,7 @@ setup(
     author=about.__author__,
     author_email=about.__author_email__,
     description=about.__doc__,
-    packages=['mytools'],
+    packages=find_packages(),
     keywords='shap,fi,pipeline',
     install_requires=requirements,
     python_requires='>=3.6',
