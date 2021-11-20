@@ -63,7 +63,7 @@ ___
     )
        X_train_prep = pipe.fit_transform(X_train)
        
-Пример без pipline
+Пример без Pipeline
 
        cols = list(X_train.columns)
        estimator = CatBoostClassifier(**params_cat)
