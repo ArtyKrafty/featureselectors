@@ -11,9 +11,9 @@ The class calculates the importance of features based on the `Shap` library for 
 
   you need to import:
 
-  !pip istall shap
-  !pip istall catboost
-  !pip istall SHFS
+    !pip istall shap 
+    !pip istall catboost 
+    !pip istall SHFS 
 
     from sklearn.base import BaseEstimator, TransformerMixin
     import shap
