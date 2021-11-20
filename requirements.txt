@@ -1,5 +1,3 @@
-pandas => 1.1
-numpy => 1.19
 shap == 0.40.0
 catboost => 1.0
 scikit-learn == 1.0.1
