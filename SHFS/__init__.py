@@ -1,7 +1,7 @@
-from featureselectors.__about__ import * 
-from featureselectors.SHFS import FeatureSelectionClf
-from featureselectors.SHFS import FeatureSelectionRegression
-from featureselectors.SHFS import FeatureSelectionUniversal
+from SHFS.__about__ import * 
+from SHFS.FeatureSelectionClf import FeatureSelectionClf
+from SHFS.FeatureSelectionRegression import FeatureSelectionRegression
+from SHFS.FeatureSelectionUniversal import FeatureSelectionUniversal
 
 __all__ = [
     'FeatureSelectionUniversal',
