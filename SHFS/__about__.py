@@ -1,7 +1,7 @@
 __version__ = "0.0.1"
 __author__ = "Artem, et al."
 __author_email__ = "artysolomko@gmail.com"
-__homepage__ = "https://github.com/ArtyKrafty/featureselectors" ,
+__homepage__ = "https://github.com/ArtyKrafty/featureselectors/" ,
 __doc__ = "Rласс вычисляет важность признаков на основе библиотеки Shap для задачи классификации" \
           " Работает только с деревьями для большей эффективности или моделями на основе градиентного бустинга"
 
