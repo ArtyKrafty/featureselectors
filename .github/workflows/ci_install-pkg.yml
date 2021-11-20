@@ -54,6 +54,6 @@ jobs:
           virtualenv vEnv
           source vEnv/bin/activate
           pip install dist/*
-          cd .. & python -c "import featureselectors ; print(featureselectors.__version__)"
+          cd .. & python -c "import mytools ; print(mytools.__version__)"
           deactivate
           rm -rf vEnv
