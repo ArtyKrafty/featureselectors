@@ -48,7 +48,7 @@ ___
     cat_features = list(X_train_cat.select_dtypes(include=['object', 'category']).columns)
     num_features = list(X_train_cat.select_dtypes(exclude=['object', 'category']).columns)
     estimator = CatBoostClassifier(**params_cat)
-    selector = ShapFeatureSelection(estimator, n_features_to_select=3, columns=cols) 
+    selector = FeatureSelectionClf(estimator, n_features_to_select=3, columns=cols) 
     preprocessor = ColumnTransformer (
         transformers = [
 
@@ -73,6 +73,6 @@ Example without Pipeline
 
        cols = list(X_train.columns)
        estimator = CatBoostClassifier(**params_cat)
-       selector = ShapFeatureSelection(estimator, n_features_to_select=3, columns=cols)
+       selector = FeatureSelectionClf(estimator, n_features_to_select=3, columns=cols)
        X = selector.fit(X_train_prep, y_train)
 
