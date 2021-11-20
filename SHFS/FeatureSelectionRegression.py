@@ -8,42 +8,38 @@ from sklearn.base import BaseEstimator, TransformerMixin
 
 class FeatureSelectionRegression(BaseEstimator, TransformerMixin) :
     """
-    Класс вычисляет  важность признаков на основе feature_importance для задачи регрессии
-    и классификации.
-    Работает только с деревьями для большей эффективности или моделями на основе
-    градиентного бустинга. Приоритетно использовать такие модели как:
+    The class calculates the importance of features based on the Shap library for a regression problem.
+    Only works with trees for better efficiency or models based on
+    gradient boosting. It is a priority to use such models as:
 
-     Catboost - не требует обработки NaN и категорий. работает с sklearn
+     Catboost - does not require NaN and category handling. works with sklearn
 
-
-    Для работы необходимо импортировать:
+    To work, you need to import:
 
       from sklearn.base import BaseEstimator, TransformerMixin
       import shap
 
-    Параметры
+    Options
       ----------
-      estimator :
-          Обучение с учителем с методом fit позволит получить и отобрать индексы
-          самых важных признаков
-      n_features_to_select : int, default=None
-          Количество признаков для отбора, по умолчанию значение None
-      columns: List, default=None
-          Список признаков исходного сета, по умолчанию значение None
+      estimator:
+          Supervised learning with fit method will get and select indices
+          the most important signs
+      n_features_to_select: int, default = None
+          Number of features for selection, default value is None
+      columns: List, default = None
+          List of attributes of the initial set, default value is None
 
-    Методы
+    Methods
       ----------
-      fit - обучается и выявляет наиболее важные признаки
-      tranform - изменяет исходный сет и вовзращает отобранные признаки
-      get_index - возвращает отобранные признаки индексов
-      plot_values - построение графика shap values
-      _estimator_type - метод @property - возвращает тип модели
-      get_feature_importance - возвращает DataFrame FI
-    Примечание
+      fit - trains and identifies the most important signs
+      tranform - changes the original set and returns the selected attributes
+      get_index - Returns the selected indexes attributes
+      plot_values - plotting shap values
+      _estimator_type - @property method - returns the type of the model
+      get_feature_importance - Returns DataFrame FI
+    Note
       -----
-      Не работает с категориальными признаками. Nan/Inf разрешены в случае, если
-      их принимает модель метода fit
-    Пример использования
+
       ----------
       cols = list(X_train.columns)
       cat_features = list(X_train_cat.select_dtypes(include=['object', 'category']).columns)
