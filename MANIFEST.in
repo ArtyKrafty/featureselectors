@@ -7,7 +7,7 @@ recursive-exclude __pycache__  *.py[cod] *.orig
 include *.md
 
 
-recursive-include featureselectors *.py
+recursive-include mytools *.py
 
 # Include the Requirements
 include requirements.txt
