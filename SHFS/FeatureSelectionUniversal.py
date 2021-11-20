@@ -8,43 +8,44 @@ from sklearn.base import BaseEstimator, TransformerMixin
 
 class FeatureSelectionUniversal(BaseEstimator, TransformerMixin) :
     """
-    Класс вычисляет  важность признаков на основе библиотеки Shap для задачи регрессии
-    Работает только с деревьями для большей эффективности или моделями на основе
-    градиентного бустинга. Приоритетно использовать такие модели как:
+    The class calculates the importance of features based on the Shap library for a regression problem
+    Only works with trees for better efficiency or models based on
+    gradient boosting. It is a priority to use such models as:
 
-    Catboost - не требует обработки NaN и категорий. работает с sklearn
+    Catboost - does not require NaN and category handling. works with sklearn
 
-    Для работы необходимо импортировать:
+    To work, you need to import:
 
       from sklearn.base import BaseEstimator, TransformerMixin
       import shap
 
-    Параметры
+    Options
       ----------
-      estimator :
-          Обучение с учителем с методом fit позволит получить и отобрать индексы
-          самых важных признаков
-      n_features_to_select : int, default=None
-          Количество признаков для отбора, по умолчанию значение None
-      columns: List, default=None
-          Список признаков исходного сета, по умолчанию значение None
+      estimator:
+          Supervised learning with fit method will get and select indices
+          the most important signs
+      n_features_to_select: int, default = None
+          Number of features for selection, default value is None
+      columns: List, default = None
+          List of attributes of the initial set, default value is None
 
-    Методы
+ 
+    Methods
       ----------
-      fit - обучается и выявляет наиболее важные признаки
-      tranform - изменяет исходный сет и вовзращает отобранные признаки
-      get_index - возвращает отобранные признаки индексов
+      fit - trains and identifies the most important signs
+      tranform - changes the original set and returns the selected attributes
+      get_index - Returns the selected indexes attributes
 
-    Примечание
+    Note
       -----
-      Категориальные признаки и Nan/Inf разрешены в случае, если
-      их принимает модель метода fit
-    Пример использования
+      Categorical signs and Nan / Inf are allowed if
+      they are accepted by the fit method model
+    Usage example
       ----------
-      cols = list(X_train.columns)
-      estimator = CatBoostRegressor(**params)
-      selector = FeatureSelection(estimator, n_features_to_select=20, columns=cols)
-      selector.fit(X_train, y_train)
+      cols = list (X_train.columns)
+      estimator = CatBoostRegressor (** params)
+      selector = FeatureSelection (estimator, n_features_to_select = 20, columns = cols)
+      selector.fit (X_train, y_train)
 
 
       """
