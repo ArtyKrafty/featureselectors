@@ -3,40 +3,40 @@
 <p align="center"><img src="https://i.ibb.co/ZXSk6jG/machine-learning-1920x1180.jpg" alt="machine-learning-1920x1180"></p>
 
 
- Класс вычисляет  важность признаков на основе библиотеки `Shap` для задачи классификации. 
-  Работает только с деревьями для большей эффективности или моделями на основе 
-  градиентного бустинга. Приоритетно использовать такие модели как:
+The class calculates the importance of features based on the `Shap` library for a classification problem.
+  Only works with trees for better efficiency or models based on
+  gradient boosting. It is a priority to use such models as:
    
-   Catboost - не требует обработки `NaN` и категорий. работает с `sklearn`
+   Catboost - does not require handling of `NaN` and categories. works with `sklearn`
 
-  Для работы необходимо импортировать:
+  you need to import:
 
     from sklearn.base import BaseEstimator, TransformerMixin
     import shap
 
-  Параметры. 
+  Parametrs. 
 ___
     `estimator` :   
-        Обучение с учителем с методом fit позволит получить и отобрать индексы.  
-        самых важных признаков. 
-    n_features_to_select : int, default=None. 
-        Количество признаков для отбора, по умолчанию значение None. 
-    columns: List, default=None. 
-        Список признаков исходного сета, по умолчанию значение None. 
+        Supervised learning with the fit method will allow you to retrieve and select indices.
+        the most important signs.
+    n_features_to_select: int, default = None.
+        The number of features to select, the default is None.
+    columns: List, default = None.
+        The list of attributes of the initial set, the default is None.
     
-  Методы
+  Methods
 ___
-    fit - обучается и выявляет наиболее важные признаки
-    tranform - изменяет исходный сет и вовзращает отобранные признаки
-    get_index - возвращает отобранные признаки индексов
-    plot_values - построение графика shap values
-    _estimator_type - метод @property - возвращает тип модели
-    get_feature_importance - возвращает DataFrame FI
-  Примечание
+    fit - trains and identifies the most important signs
+    tranform - changes the original set and returns the selected attributes
+    get_index - Returns the selected indexes attributes
+    plot_values - plotting shap values
+    _estimator_type - @property method - returns the type of the model
+    get_feature_importance - Returns DataFrame FI
+  Note
 ___
-    Не работает с категориальными признаками. Nan/Inf разрешены в случае, если 
-    их принимает модель метода fit
-  Пример использования для классификации
+ Nan / Inf are allowed in case
+    they are accepted by the fit method model
+  Example use for classification
 ___
     cols = list(X_train.columns)
     cat_features = list(X_train_cat.select_dtypes(include=['object', 'category']).columns)
@@ -63,7 +63,7 @@ ___
     )
        X_train_prep = pipe.fit_transform(X_train)
        
-Пример без Pipeline
+Example without Pipeline
 
        cols = list(X_train.columns)
        estimator = CatBoostClassifier(**params_cat)
