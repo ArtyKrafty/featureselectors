@@ -44,7 +44,7 @@ class FeatureSelectionUniversal(BaseEstimator, TransformerMixin) :
       ----------
       cols = list (X_train.columns)
       estimator = CatBoostRegressor (** params)
-      selector = FeatureSelection (estimator, n_features_to_select = 20, columns = cols)
+      selector = FeatureSelectionUniversal (estimator, n_features_to_select = 20, columns = cols)
       selector.fit (X_train, y_train)
 
 
