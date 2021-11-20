@@ -3,8 +3,6 @@ import numpy as np
 import shap
 from sklearn.model_selection import train_test_split
 from sklearn.base import BaseEstimator, TransformerMixin
-from catboost import CatBoostClassifier, CatBoostRegressor
-import catboost
 
 
 class FeatureSelectionClf(BaseEstimator, TransformerMixin) :
