@@ -8,7 +8,9 @@ The class calculates the importance of features based on the `Shap` library for 
   gradient boosting. It is a priority to use such models as:
    
    Catboost - does not require handling of `NaN` and categories. works with `sklearn`
-
+   
+  https://pypi.org/project/SHFS/
+  
   you need to import:
   
   Quick start: [Collab](https://colab.research.google.com/gist/ArtyKrafty/5a6cb7ab1bf9366e4f93f44f316549b1/example.ipynb)
