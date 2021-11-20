@@ -16,7 +16,8 @@ PATH_HERE = path.abspath(path.dirname(__file__))
 with open(path.join(PATH_HERE, 'requirements.txt'), encoding='utf-8') as fp:
     requirements = [rq.rstrip() for rq in fp.readlines() if not rq.startswith('#')]
     
-with open("README.md", "r") as readme_file:
+
+with open("description.txt", "r") as readme_file:
     readme = readme_file.read()
 
 
@@ -29,6 +30,7 @@ setup(
     author_email=about.__author_email__,
     description=about.__doc__,
     long_description=readme,
+    long_description_content_type="text/markdown",
     packages=find_packages(),
     keywords='shap,fi,pipeline',
     install_requires=requirements,
