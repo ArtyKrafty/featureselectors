@@ -1,0 +1,19 @@
+
+graft wheelhouse
+
+recursive-exclude __pycache__  *.py[cod] *.orig
+
+# Include the README
+include *.md
+
+
+recursive-include featureselectors *.py
+
+# Include the Requirements
+include requirements.txt
+
+# Exclude build configs
+exclude *.yml
+exclude *.yaml
+
+prune .github
