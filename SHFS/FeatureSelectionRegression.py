@@ -44,7 +44,7 @@ class FeatureSelectionRegression(BaseEstimator, TransformerMixin) :
       cols = list(X_train.columns)
       cat_features = list(X_train_cat.select_dtypes(include=['object', 'category']).columns)
       num_features = list(X_train_cat.select_dtypes(exclude=['object', 'category']).columns)
-      estimator = CatBoostRegressor(**params_cat)
+      estimator = FeatureSelectionClf(**params_cat)
       selector = ShapFeatureSelection(estimator, n_features_to_select=3, columns=cols)
 
 
