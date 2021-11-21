@@ -16,11 +16,13 @@ The class calculates the importance of features based on the `Shap` library for 
             FeatureSelectionRegression - for regression
             FeatureSelectionUniversal - for both classification and regression tasks
 
-
-            
+  Quick start: [Collab](https://colab.research.google.com/gist/ArtyKrafty/5a6cb7ab1bf9366e4f93f44f316549b1/example.ipynb) and [Tutorial](https://nbviewer.org/github/ArtyKrafty/featureselectors/blob/main/Tutorial/Tutorials_ipynb_.ipynb)
+        
+        
+        
   you need to import:
   
-  Quick start: [Collab](https://colab.research.google.com/gist/ArtyKrafty/5a6cb7ab1bf9366e4f93f44f316549b1/example.ipynb)
+
 
     !pip install shap 
     !pip install catboost 
