@@ -11,6 +11,15 @@ The class calculates the importance of features based on the `Shap` library for 
    
   https://pypi.org/project/SHFS/
   
+
+              FeatureSelectionClf - for classification
+
+            FeatureSelectionRegression - for regression
+
+            FeatureSelectionUniversal - for both classification and regression tasks
+
+
+            
   you need to import:
   
   Quick start: [Collab](https://colab.research.google.com/gist/ArtyKrafty/5a6cb7ab1bf9366e4f93f44f316549b1/example.ipynb)
@@ -28,7 +37,7 @@ The class calculates the importance of features based on the `Shap` library for 
 ___
     `estimator` :   
         Supervised learning with the fit method will allow you to retrieve and select indices.
-        the most important signs.
+        the most important features.
     n_features_to_select: int, default = None.
         The number of features to select, the default is None.
     columns: List, default = None.
@@ -36,7 +45,7 @@ ___
     
   Methods
 ___
-    fit - trains and identifies the most important signs
+    fit - trains and identifies the most important features
     tranform - changes the original set and returns the selected attributes
     get_index - Returns the selected indexes attributes
     plot_values - plotting shap values
