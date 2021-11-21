@@ -12,10 +12,8 @@ The class calculates the importance of features based on the `Shap` library for 
   https://pypi.org/project/SHFS/
   
 
-              FeatureSelectionClf - for classification
-
+            FeatureSelectionClf - for classification
             FeatureSelectionRegression - for regression
-
             FeatureSelectionUniversal - for both classification and regression tasks
 
 
