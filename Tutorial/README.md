@@ -1,0 +1,3 @@
+ML dataset for classification or regression tasks is comprised of features  of an observation in a problem domain and target
+
+The main goal of feature selection refers to techniques that select a subset of the most strong or "gold" features in a data. Fewer features can allow ML models to run more efficiently and be more effective and do not be misled by irrelevant input features. It is affect to quality
