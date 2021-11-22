@@ -32,7 +32,7 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     packages=find_packages(),
-    keywords='shap,fi,pipeline',
+    keywords='shap, fi, pipeline',
     install_requires=requirements,
     python_requires='>=3.6',
     include_package_data=True,

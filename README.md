@@ -14,6 +14,7 @@ The FeatureSelection calculates the importance of features based on the `Shap` l
     manually install dependencies using either !pip or !apt.
 
             !pip install shap 
+            !pip install phik
    
   https://pypi.org/project/SHFS/
   

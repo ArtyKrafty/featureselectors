@@ -1,4 +1,4 @@
-__version__ = "1.0.2"
+__version__ = "1.0.4"
 __author__ = "Artem, et al."
 __author_email__ = "artysolomko@gmail.com"
 __homepage__ = "https://github.com/ArtyKrafty/featureselectors" 
