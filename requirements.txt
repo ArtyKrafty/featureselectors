@@ -1,3 +1,5 @@
 pandas
 numpy
 scikit-learn == 1.0.1
+shap == 0.40.0
+phik == 0.12.0
