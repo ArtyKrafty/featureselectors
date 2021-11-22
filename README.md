@@ -1,6 +1,6 @@
 <p align="center"><img src="https://i.ibb.co/ZXSk6jG/machine-learning-1920x1180.jpg" alt="machine-learning-1920x1180"></p>
  
-Library consist of two groups of Classes - Feature selectors and DFwrapper to have a deal with outliers and correlation
+Library consist of two groups of Classes - `Featureselectors` and `DFwrapper` to have a deal with outliers and correlation
 
 1. Feature selection group
 
