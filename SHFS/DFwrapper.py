@@ -21,7 +21,7 @@ class DFwrapper():
     quantile_cleaner - Coarsely cuts high and low quantile. Low and high parameter
     frame_irq - finer cleaning of outliers. You need to pass koeff to calculate the swing.
                 Recommended - 1.5
-    get_bad - Returns a list of features with collinearity
+
 
     Usage example
     ----------
@@ -91,6 +91,5 @@ class DFwrapper():
     df_irq = pd.concat([frames])
     return df_irq
 
-  def get_bad(self):
-    return self.to_drop
+
 
