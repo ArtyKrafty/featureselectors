@@ -52,7 +52,8 @@ ___
  Nan / Inf are allowed in case
     they are accepted by the fit method model
   Example use for classification
-___
+
+```python
     cols = list(X_train.columns)
     cat_features = list(X_train_cat.select_dtypes(include=['object', 'category']).columns)
     num_features = list(X_train_cat.select_dtypes(exclude=['object', 'category']).columns)
@@ -76,33 +77,42 @@ ___
         ]
     )
        X_train_prep = pipe.fit_transform(X_train)
-       
+ ```
+ 
 Example without Pipeline
-
+```python
        cols = list(X_train.columns)
        estimator = CatBoostClassifier(**params_cat)
        selector = FeatureSelectionClf(estimator, n_features_to_select=3, columns=cols)
        X = selector.fit(X_train_prep, y_train)
+```
 
 
 2. DFwrapper
 
 DFwrapper - remove multicollinearity and outliers from Pandas DataFrame
 
-    Usage example
-    ----------
-    1. Collinearity
+Usage example
+
+1. Collinearity
+    ```python
 
     cleaner = DFwrapper()
     new_df = cleaner.wrap_corr(df)
+    ```
+2. Outliers. Rough cleaning
 
-    2. Outliers. Rough cleaning
+    ```python
 
     cleaner = DFwrapper(low=.05, high=.95)
     cleaned = cleaner.quantile_cleaner(df, cols_to_clean)
+    ```
 
-    2. Outliers. Finer cleaning
+3. Outliers. Finer cleaning
+    ```python
 
     cleaner = DFwrapper(koeff=1.5)
     cleaned = cleaner.frame_irq(df, cols_to_clean)
+    
+    ```
 
