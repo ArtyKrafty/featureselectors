@@ -1,3 +1,7 @@
+
+<img src='https://img.shields.io/pypi/v/SHFS?style=plastic'>
+
+
 <p align="center"><img src="https://i.ibb.co/ZXSk6jG/machine-learning-1920x1180.jpg" alt="machine-learning-1920x1180"></p>
  
 Library consist of two groups of Classes - `Featureselectors` - select the best features from ml dataset and `DFwrapper` to have a deal with outliers and correlation
